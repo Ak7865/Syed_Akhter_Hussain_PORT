@@ -555,7 +555,7 @@
 
             <div class="col-lg-7">
               <form
-               
+               method="post"
                 class="php-email-form" id="contact-form"
                 data-aos="fade-up"
                 data-aos-delay="200"
@@ -668,7 +668,7 @@
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
 
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/contact.js", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
