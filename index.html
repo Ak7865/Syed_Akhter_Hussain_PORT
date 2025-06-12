@@ -554,7 +554,8 @@
             </div>
 
             <div class="col-lg-7">
-              <form id="contact-form" action="https://formspree.io/f/moqgnvzw" method="POST" class="php-email-form">
+              <form id="contact-form"  action="https://formspree.io/f/xpwrddqe"
+  method="POST" class="php-email-form">
   <div class="row gy-4">
     <div class="col-md-6">
       <label for="name">Your Name</label>
@@ -628,28 +629,6 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-   <script>
-    const form = document.getElementById("contact-form");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-
-      const res = await fetch("/api/contact.js", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-
-      if (res.ok) {
-        alert("Message sent successfully!");
-        form.reset();
-      } else {
-        const error = await res.text();
-        alert("Error sending message: " + error);
-      }
-    });
-  </script>
-
+   
   </body>
 </html>
