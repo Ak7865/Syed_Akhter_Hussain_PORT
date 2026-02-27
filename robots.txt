@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://syed-akhter-hussain-port.vercel.app/sitemap.xml
